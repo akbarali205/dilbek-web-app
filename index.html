@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h1>Telegramga malumot yuboruvchi web app</h1>
+<input type="text" placeholder="yoz" id="input">
+<button onclick="sendData()">bos</button>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+    const tg = window.Telegram.WebApp;
+
+
+
+    const input = document.getElementById('input')
+    function sendData() {
+        tg.sendData(input.value);
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
